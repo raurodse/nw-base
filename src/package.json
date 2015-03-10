@@ -1,0 +1,24 @@
+{
+  "main": "index.html",
+  "name": "Application",
+  "description": "Application",
+  "version": "0.1.0",
+  "keywords": [
+    "application"
+  ],
+  "window": {
+    "title": "Application",
+    "icon": "logo.png",
+    "toolbar": false,
+    "frame": true,
+    "width": 1024,
+    "height": 768,
+    "position": "mouse"
+  },
+  "webkit": {
+    "plugin": true
+  },
+  "dependencies": {
+    "jed": "~1.1.0"
+  }
+}
