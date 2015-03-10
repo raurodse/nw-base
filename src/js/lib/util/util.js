@@ -87,5 +87,5 @@ Util.prototype.singleton = function singleton(Library) {
 
 var llxutil = new Util();
 llxutil.createNameSpace('application.util.core');
-application.util.core = CBUtil.singleton(Util);
+application.util.core = llxutil.singleton(Util);
 delete llxutil;

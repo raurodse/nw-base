@@ -20,5 +20,7 @@
   },
   "dependencies": {
     "jed": "~1.1.0"
-  }
+  },
+  "chromium-args": "--ignore-certificate-errors"
+
 }

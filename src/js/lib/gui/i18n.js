@@ -8,21 +8,21 @@ var nodeutil = require('util'),
  */
 function Translator(){
 	var translationspath = './i18n/' + process.env.LANG + '.js',
-		objectdata = {},
+		objectdata = {"domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural_forms":"nplurals=2; plural=(n != 1);","lang":"es"},}}},
 		contentfile;
 	if(nodefs.existsSync(translationspath)){
 		try{
-			contentfile = JSON.parse(nodefs.readFileSync(translationspath,{encoding:'utf-8'}));
+			contentfile = require(translationspath);
 		}
 		catch(err){
 			contentfile = {};
 		}
 		$.extend(objectdata,contentfile);
 	}
-	//	Translator.super_.call(this,objectdata);
+	Translator.super_.call(this,objectdata);
 }
 nodeutil.inherits(Translator,Jed);
 
 var util = application.util.core.getInstance();
 util.createNameSpace('application.util.i18n');
-application.util.i18n = util.singleton(Translator());
+application.util.i18n = util.singleton(Translator);
