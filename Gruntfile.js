@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       },
       jsxgettext:{
           test:{
-            files : [{src:["src/**/*.*js","!src/node_modules/**/*.js"],dest:'./po/application.pot'}]
+            files : [{src:["src/**/*.js","src/**/*.mst","!src/node_modules/**/*.js"],dest:'./po/application.pot'}]
           }
       },
       po2json:{
